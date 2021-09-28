@@ -1,0 +1,74 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8"></meta>
+	<title>This is dashboard page.</title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="card">
+				<div class="card-body">
+				
+				<div class="container text-center">
+					<img src="" 
+						 class="my_profile_picture" 
+						 th:src="@{/img/default.jpg}" 
+						 alt="Profile Photo"
+						 style="height:200px; width:200px;"/>
+				</div>
+				
+				<h1 class="text-center mt-3" th:text="${user.name}"></h1>
+				
+					<table class="table text-center" style="margin-top:30px;">
+					  <thead>
+					    <tr>
+					      <th scope="col">#USERID</th>
+					      <th scope="col">SCM2021-<span th:text="${user.id}"></span></th>
+					      
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">Email</th>
+					      <td th:text="${user.email}">Mark</td>
+					    </tr>
+					    
+					    <tr>
+					      <th scope="row">Role</th>
+					      <td th:text="${user.role}">Mark</td>
+					    </tr>
+					    
+					    <tr>
+					      <th scope="row">Account Active Status</th>
+					      <td th:text="${user.enabled}">Mark</td>
+					    </tr>
+					    
+					    <tr>
+					      <th scope="row">About You</th>
+					      <td th:text="${user.about}">Mark</td>
+					    </tr>
+					   
+					    					    					    
+					  </tbody>
+					  
+					  
+					  
+					</table>
+				
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			
+			$(document).ready(() => {
+				$('.item').removeClass('active');
+				$('#opt3').addClass('active');
+			});
+		
+		</script>
+		
+	</section>
+	
+</body>	
+</html>
